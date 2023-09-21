@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Abhinav's Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const articles = [
+				{
+					title: "Housing Price Forecast",
+					description: "Unlocking insights through exploratory data analysis and machine learning for precise housing price predictions.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/EDA%20%26%20ML%20on%20House%20Pricing%20Dataset/USA%20House%20prediction.ipynb",
+					imageSrc: "images/thumbs/01.jpg"
+				},
+				{
+					title: "Titanic Survival Analysis (Scored in top 3%)",
+					description: "Diving into the Titanic dataset with EDA and model training to uncover survival patterns in this iconic tragedy.",
+					link: "https://www.kaggle.com/code/abhinavatall/titanic-dataset-top-3-accuracy-with-ensambling",
+					imageSrc: "images/thumbs/02.jpg"
+				},
+				{
+					title: "Instagram Coding Influencers Analysis",
+					description: "Exploring the world of coding influencers on Instagram through in-depth EDA, revealing trends and insights in the coding community.",
+					link: "https://www.kaggle.com/code/abhinavatall/coding-influencers-follower-engagement-analysis",
+					imageSrc: "images/thumbs/03.jpg"
+				},
+				{
+					title: "Analyzing 911 Emergency Calls",
+					description: "Delving into critical data with EDA: Understanding patterns and insights in 911 emergency calls for better response strategies.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/EDA%20on%20911%20dataset%20Risk%20Analysis/911_dataset_EDA.ipynb",
+					imageSrc: "images/thumbs/04.jpg"
+				},
+				{
+					title: "Credit Score Assignment System",
+					description: "Part 1: Data Cleaning, Part 2: EDA, Part 3: Model Training. Building a robust credit score system through meticulous data cleaning, in-depth EDA, and advanced model training.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/tree/main/EDA%20on%20Credit%20Score%20Dataset",
+					imageSrc: "images/thumbs/05.jpg"
+				},
+				{
+					title: "Analyzing a Facebook Social Network",
+					description: "Exploring the dynamics of a Facebook social network using NetworkX library, uncovering connections and interactions within the digital community.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/EDA%20on%20Facebook%20friends%20Networks/Facebook_friends_network_analysis.ipynb",
+					imageSrc: "images/thumbs/06.jpg"
+				},
+
+
+				{
+					title: "Decision Trees and Random Forest",
+					description: "Mastering machine learning with a comprehensive project on Decision Tree and Random Forest algorithms, predicting outcomes with precision.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Decision%20Tree%20and%20Random%20Forest/Loan_dataset_ml.ipynb",
+					imageSrc: "images/thumbs/08.jpg"
+				},
+				
+				{
+					title: "School Clustering with K-Means",
+					description: "Using K-Means clustering to categorize schools into two distinct groups: Public and Private, revealing educational insights.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20K%20Means%20Clustering/K%20Means%20Clustering%20Project.ipynb",
+					imageSrc: "images/thumbs/09.jpg"
+				},
+				
+				{
+					title: "K-Nearest Neighbors Classification",
+					description: "Solving a privacy-preserving puzzle with K-Nearest Neighbors. Training a high-accuracy model on classified data with concealed column headers.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20K%20Nearest%20Neighbors/K%20Nearest%20Neighbors%20Project.ipynb",
+					imageSrc: "images/thumbs/10.jpg"
+				},
+				
+				{
+					title: "Linear Regression for Fashion Retail",
+					description: "Deciphering the retail dilemma: Should a fashion company invest more in offline stores or their mobile app? Employing linear regression to analyze customer time spent data and provide actionable insights.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Linear%20Regression/Linear-Regression-Project.ipynb",
+					imageSrc: "images/thumbs/11.jpg"
+				},
+				
+				{
+					title: "Predicting Ad Clicks with Logistic Regression",
+					description: "Harnessing the power of Logistic Regression to forecast whether a specific internet user will click on an advertisement or not, optimizing advertising strategies.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Logistic%20Regression/Logistic%20Regression%20Project.ipynb",
+					imageSrc: "images/thumbs/12.jpg"
+				},
+				
+				{
+					title: "Iris Species Identification with Support Vector Machines",
+					description: "Unveiling the beauty of nature through Support Vector Machines: Distinguishing diverse iris species based on sepal and petal length, a journey into botanical classification.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Support%20Vector%20Machines/Support%20Vector%20Machines%20Project.ipynb",
+					imageSrc: "images/thumbs/13.jpg"
+				}
+
+
+			];
+
+			const articlesPerPage = 4;
+			const articleContainer = document.getElementById("article-container");
+			const paginationContainer = document.getElementById("pg");
+
+			function displayArticles(page) {
+				const startIndex = (page - 1) * articlesPerPage;
+				const endIndex = startIndex + articlesPerPage;
+
+				const articlesToDisplay = articles.slice(startIndex, endIndex);
+
+				articleContainer.innerHTML = ""; // Clear existing articles
+
+				articlesToDisplay.forEach((articleData) => {
+					// Create the article element
+					const article = document.createElement("article");
+					article.className = "col-6 col-12-xsmall";
+
+					// Create the link element
+					const link = document.createElement("a");
+					link.href = articleData.link;
+					link.className = "image fit thumb";
+
+					// Create the image element
+					const image = document.createElement("img");
+					image.src = articleData.imageSrc;
+					image.alt = articleData.title;
+
+					// Create the heading element
+					const heading = document.createElement("h2");
+					const headingLink = document.createElement("a");
+					headingLink.href = articleData.link;
+					headingLink.textContent = articleData.title;
+					heading.appendChild(headingLink);
+
+					// Create the description paragraph
+					const description = document.createElement("p");
+					description.textContent = articleData.description;
+
+					// Append elements to the article
+					link.appendChild(image);
+					article.appendChild(link);
+					article.appendChild(heading);
+					article.appendChild(description);
+
+					// Append the article to the container
+					articleContainer.appendChild(article);
+				});
+			}
+
+			function createPaginationButtons() {
+				const totalPages = Math.ceil(articles.length / articlesPerPage);
+
+				for (let i = 1; i <= totalPages; i++) {
+					const button = document.createElement("button");
+					button.textContent = i;
+
+					// Add the appropriate classes to match the CSS styles
+					button.classList.add("pagination", "pages", "button"); // Add the classes here
+
+					button.addEventListener("click", () => {
+						displayArticles(i);
+					});
+					paginationContainer.appendChild(button);
+				}
+			}
+			// Initially display the first page of articles
+			displayArticles(1);
+			// Create pagination buttons
+			createPaginationButtons();
+		});
+	</script>
+
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="#" class="image avatar"><img src="images/profil_pic.png" alt="" /></a>
+			<h1><strong>Hi! I am Abhinav</strong>,<br />
+				A Data Science Problem Solver<br />
+				<a href="https://www.linkedin.com/in/abhinav33303/">@Abhinav</a>
+			</h1>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- One -->
+		<section id="one">
+			<header class="major">
+				<h2>Data Science: The <strong> Sherlock Holmes </strong> Approach<br />
+					to Unveiling Data Insights.</h2>
+			</header>
+			<p>In my journey from academia to becoming a Data Analyst and Junior Data Scientist at Cognizant Technology
+				Solutions,
+				I've embraced the art of data investigation, just like Sherlock Holmes solves mysteries. Armed with
+				Python, Pandas,
+				NumPy, and Azure Machine Learning, I've deciphered data clues, designed machine learning models, and
+				uncovered
+				actionable insights, delivering successful results. My toolkit includes Microsoft BI tools, SQL
+				expertise, and a
+				multidisciplinary mindset to tackle complex data puzzles. Like Holmes, I believe in the power of diverse
+				skills to
+				crack even the toughest cases.</p>
+			<ul class="actions">
+				<li><a href="https://www.linkedin.com/in/abhinav33303/" class="button">Find me at 221B, Baker Street</a></li>
+			</ul>
+		</section>
+
+		<section id="two">
+			<h1>Solved Cases </h1>
+			<div id="article-container" class="row">
+				<!-- Articles will be dynamically loaded here -->
+			</div>
+
+			<div id="pg" class="pagination">
+
+			</div>
+		</section>
+
+
+	
+ 
+		<section id="three">
+			<h1>Articles</h1>
+			<div class="row">
+				<article class="col-6 col-12-xsmall">
+					<a href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D" class="image fit"><img src="images/thumbs/07.jpg" alt="" /></a>
+					<h2><a href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D">Hypothesis Testing and the Crucial Role of Student's T-Distribution with real-life example.</a></h2>
+					
+				</article>
+				</div>
+		</section>
+
+
+
+
+
+		<!-- Three -->
+		<section id="four">
+			<h2>Get In Touch</h2>
+			<p>Ready to embark on a data-driven adventure together? Let's connect!
+				I'm eager to share more about my data science expertise and explore how I can contribute to your team's
+				success.
+				Reach out, and let's start unraveling insights together. </p>
+			<div class="row">
+
+				<div class="col-4 col-12-small">
+					<ul class="labeled-icons">
+						<li>
+							<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+							<a href="mailto:abhinav33303+datascience@gmail.com">abhinav3303+datascience@gmail.com</a>
+						</li>
+						<li>
+							<h3 class="icon brands fa-kaggle"><span class="label">Linkedin</span></h3>
+							<a href="https://www.linkedin.com/in/abhinav33303/">abhinav3303</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+				<li><a href="https://github.com/Abhinav330" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				<li><a href="https://www.kaggle.com/abhinavatall" class="icon brands fa-kaggle"><span class="label">Dribbble</span></a></li>
+				<li><a href="mailto:abhinav33303+datascience@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; 2023</li>
+				<li>Design: <a href="http://html5up.net">Designed by Abhinav with ❤️ and HTML5</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.poptrox.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

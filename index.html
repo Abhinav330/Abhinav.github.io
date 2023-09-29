@@ -6,16 +6,23 @@
 	<title>Abhinav's Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta property="og:title" content="Abhinav's Portfolio">
+	<meta property="og:description" content="Explore Abhinav's portfolio showcasing creative projects.">
+	<meta property="og:url" content="https://abhinav330.github.io/Abhinav.github.io">
+	<meta property="og:image" content="images/OG.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<!-- Add more Open Graph tags as needed -->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			const articles = [
 				{
-					title: "Housing Price Forecast",
-					description: "Unlocking insights through exploratory data analysis and machine learning for precise housing price predictions.",
-					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/EDA%20%26%20ML%20on%20House%20Pricing%20Dataset/USA%20House%20prediction.ipynb",
-					imageSrc: "images/thumbs/01.jpg"
+					title: "Analyzing 911 Emergency Calls",
+					description: "Delving into critical data with EDA: Understanding patterns and insights in 911 emergency calls for better response strategies.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/EDA%20on%20911%20dataset%20Risk%20Analysis/911_dataset_EDA.ipynb",
+					imageSrc: "images/thumbs/04.jpg"
 				},
 				{
 					title: "Titanic Survival Analysis (Scored in top 3%)",
@@ -23,18 +30,23 @@
 					link: "https://www.kaggle.com/code/abhinavatall/titanic-dataset-top-3-accuracy-with-ensambling",
 					imageSrc: "images/thumbs/02.jpg"
 				},
+
 				{
 					title: "Instagram Coding Influencers Analysis",
 					description: "Exploring the world of coding influencers on Instagram through in-depth EDA, revealing trends and insights in the coding community.",
 					link: "https://www.kaggle.com/code/abhinavatall/coding-influencers-follower-engagement-analysis",
 					imageSrc: "images/thumbs/03.jpg"
 				},
+
 				{
-					title: "Analyzing 911 Emergency Calls",
-					description: "Delving into critical data with EDA: Understanding patterns and insights in 911 emergency calls for better response strategies.",
-					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/EDA%20on%20911%20dataset%20Risk%20Analysis/911_dataset_EDA.ipynb",
-					imageSrc: "images/thumbs/04.jpg"
+					title: "Housing Price Forecast",
+					description: "Unlocking insights through exploratory data analysis and machine learning for precise housing price predictions.",
+					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/EDA%20%26%20ML%20on%20House%20Pricing%20Dataset/USA%20House%20prediction.ipynb",
+					imageSrc: "images/thumbs/01.jpg"
 				},
+
+
+
 				{
 					title: "Credit Score Assignment System",
 					description: "Part 1: Data Cleaning, Part 2: EDA, Part 3: Model Training. Building a robust credit score system through meticulous data cleaning, in-depth EDA, and advanced model training.",
@@ -55,42 +67,83 @@
 					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Decision%20Tree%20and%20Random%20Forest/Loan_dataset_ml.ipynb",
 					imageSrc: "images/thumbs/08.jpg"
 				},
-				
+
 				{
 					title: "School Clustering with K-Means",
 					description: "Using K-Means clustering to categorize schools into two distinct groups: Public and Private, revealing educational insights.",
 					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20K%20Means%20Clustering/K%20Means%20Clustering%20Project.ipynb",
 					imageSrc: "images/thumbs/09.jpg"
 				},
-				
+
 				{
 					title: "K-Nearest Neighbors Classification",
 					description: "Solving a privacy-preserving puzzle with K-Nearest Neighbors. Training a high-accuracy model on classified data with concealed column headers.",
 					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20K%20Nearest%20Neighbors/K%20Nearest%20Neighbors%20Project.ipynb",
 					imageSrc: "images/thumbs/10.jpg"
 				},
-				
+
 				{
 					title: "Linear Regression for Fashion Retail",
 					description: "Deciphering the retail dilemma: Should a fashion company invest more in offline stores or their mobile app? Employing linear regression to analyze customer time spent data and provide actionable insights.",
 					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Linear%20Regression/Linear-Regression-Project.ipynb",
 					imageSrc: "images/thumbs/11.jpg"
 				},
-				
+
 				{
 					title: "Predicting Ad Clicks with Logistic Regression",
 					description: "Harnessing the power of Logistic Regression to forecast whether a specific internet user will click on an advertisement or not, optimizing advertising strategies.",
 					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Logistic%20Regression/Logistic%20Regression%20Project.ipynb",
 					imageSrc: "images/thumbs/12.jpg"
 				},
-				
+
 				{
 					title: "Iris Species Identification with Support Vector Machines",
 					description: "Unveiling the beauty of nature through Support Vector Machines: Distinguishing diverse iris species based on sepal and petal length, a journey into botanical classification.",
 					link: "https://github.com/Abhinav330/Data-Science-Projects/blob/main/Project%20on%20Support%20Vector%20Machines/Support%20Vector%20Machines%20Project.ipynb",
 					imageSrc: "images/thumbs/13.jpg"
-				}
+				},
 
+				{
+					title: "Mobile Message Spam Detector",
+					description: "Empowering your mobile experience: Building a machine learning model to differentiate between spam and genuine messages, ensuring your inbox stays clutter-free.",
+					link: "https://github.com/Abhinav330/spam-message-detector",
+					imageSrc: "images/thumbs/14.jpg"
+				},
+
+				{
+					title: "Desktop Voice Assistant in Python",
+					description: "Bringing innovation to your desktop: Developing a voice assistant using Python for seamless and hands-free desktop interactions.",
+					link: "https://github.com/Abhinav330/Desktop-Voice-Assistant-python/blob/main/code.py",
+					imageSrc: "images/thumbs/15.jpg"
+				},
+
+				{
+					title: "Top News Reader",
+					description: "Stay informed with ease: Python code that fetches and reads top news headlines from an API, delivering news updates through text-to-speech functionality.",
+					link: "https://github.com/Abhinav330/Top-News-Headlines-Reader/blob/main/code.py",
+					imageSrc: "images/thumbs/16.jpg"
+				},
+
+				{
+					title: "Fresher Salary Prediction with Linear Regression",
+					description: "Navigating the career path: Building a salary prediction system for freshers using a Kaggle dataset and the power of linear regression.",
+					link: "https://github.com/Abhinav330/fresher-salary-prediction-using-linear-reggression/blob/main/linear_regression.ipynb",
+					imageSrc: "images/thumbs/17.jpg"
+				},
+
+				{
+					title: "GUI Calculator with Python Tkinter",
+					description: "Solving equations with style: Crafting a user-friendly GUI calculator in Python, also available in .exe format for convenience.",
+					link: "https://github.com/Abhinav330/GUI-Calculator-python-Tkinter",
+					imageSrc: "images/thumbs/18.jpg"
+				},
+
+				{
+					title: "Library Management System in Python",
+					description: "Exploring the world of Object-Oriented Programming: A fundamental project designed for learning, creating a Library Management System using Python.",
+					link: "https://github.com/Abhinav330/Library-Management-system-python",
+					imageSrc: "images/thumbs/19.jpg"
+				}
 
 			];
 
@@ -151,10 +204,14 @@
 					button.textContent = i;
 
 					// Add the appropriate classes to match the CSS styles
-					button.classList.add("pagination", "pages", "button"); // Add the classes here
+					button.classList.add("pagination", "pages", "button");
 
 					button.addEventListener("click", () => {
 						displayArticles(i);
+
+						// Scroll to the top of the "Solved Cases" section
+						const solvedCasesSection = document.getElementById("two");
+						solvedCasesSection.scrollIntoView({ behavior: "smooth" });
 					});
 					paginationContainer.appendChild(button);
 				}
@@ -182,7 +239,7 @@
 			<sub><a href="mailto:abhinav33303+datascience@gmail.com">Mail</a></sub>
 			<sub><a href="https://github.com/Abhinav330">Github</a></sub>
 			<sub><a href="https://www.kaggle.com/abhinavatall">Kaggle</a></sub>
-			<sub><a href="assets\pdfs\Abhinav's Resume22-09.pdf">Resume</a></sub>
+			<sub><a href="..\assets\pdfs\Abhinav's Resume22-09.pdf">Resume</a></sub>
 		</div>
 	</header>
 
@@ -207,7 +264,8 @@
 				skills to
 				crack even the toughest cases.</p>
 			<ul class="actions">
-				<li><a href="https://www.linkedin.com/in/abhinav33303/" class="button">Find me at 221B, Baker Street</a></li>
+				<li><a href="https://www.linkedin.com/in/abhinav33303/" class="button">Find me at 221B, Baker Street</a>
+				</li>
 			</ul>
 		</section>
 
@@ -223,33 +281,90 @@
 		</section>
 
 
-	
- 
+
+
 		<section id="three">
 			<h1>Articles</h1>
 			<div class="row">
 				<article class="col-6 col-12-xsmall">
-					<a href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D" class="image fit"><img src="images/thumbs/07.jpg" alt="" /></a>
-					<h2><a href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D">Hypothesis Testing and the Crucial Role of Student's T-Distribution with real-life example.</a></h2>
-					
+					<a href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D"
+						class="image fit"><img src="images/thumbs/07.jpg" alt="" /></a>
+					<h2><a
+							href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D">Hypothesis
+							Testing and the Crucial Role of Student's T-Distribution with real-life example.</a></h2>
+
 				</article>
-				</div>
+			</div>
+		</section>
+
+		<section id="six">
+			<h1> Skills </h1>
+			<h4>
+				<div class="skill-category">Technical Skills:</div>
+			</h4>
+			<span class="skill-tag">Python</span>
+			<span class="skill-tag">SQL (SQL Server and MySQL)</span>
+			<span class="skill-tag">MS Excel</span>
+			<span class="skill-tag">Pandas</span>
+			<span class="skill-tag">NumPy</span>
+			<span class="skill-tag">Matplotlib</span>
+			<span class="skill-tag">Seaborn</span>
+			<span class="skill-tag">Plotly</span>
+			<span class="skill-tag">Azure Data Factory</span>
+			<span class="skill-tag">Power BI</span>
+			<!-- Add more skills here -->
+
+			<h4>
+				<div class="skill-category">Machine Learning and AI:</div>
+			</h4>
+			<span class="skill-tag">Machine Learning Model Design</span>
+			<span class="skill-tag">Azure Machine Learning</span>
+			<span class="skill-tag">TensorFlow</span>
+
+			<h4>
+				<div class="skill-category">Cloud Computing:</div>
+			</h4>
+			<span class="skill-tag">Microsoft Azure</span>
+			<span class="skill-tag">Google Cloud Platform</span>
+			<span class="skill-tag">AWS (Amazon Web Services)</span>
+			<!-- Add more skills here -->
+
+			,<h4>
+				<div class="skill-category"> Non-Technical Skills:</div>
+			</h4>
+			<span class="skill-tag">Leadership Skills</span>
+			<span class="skill-tag">Teamwork and Collaboration</span>
+			<span class="skill-tag">Project Planning and Execution</span>
+
+
+			<h3>
+				<div class="skill-category">Aditional Skills:</div>
+			</h3>
+
+			<span class="skill-tag">IoT (Internet of Things)</span>
+			<span class="skill-tag">Robotics</span>
+			<span class="skill-tag">Patent Filing (four patents)</span>
+			<span class="skill-tag">Research Paper Publication</span>
+
+
+
+
 		</section>
 
 
 		<section id="four">
 			<h2>MY Resume</h2>
 			<div>
-				<iframe src="assets\pdfs\Abhinav's Resume22-09.pdf" width="50%" height="300px"></iframe>
+				<iframe src="..\assets\pdfs\Abhinav's Resume22-09.pdf" width="50%" height="300px"></iframe>
 			</div>
 			<br>
 			<div>
-			<ul class="actions">
-				<li><a href="assets\pdfs\Abhinav's Resume22-09.pdf" class="button primary icon solid fa-download" download>Download Resume</a></li>
-			</ul>
-		</div>
+				<ul class="actions">
+					<li><a href="..\assets\pdfs\Abhinav's Resume22-09.pdf" class="button primary icon solid fa-download"
+							download>Download Resume</a></li>
+				</ul>
+			</div>
 		</section>
-
 
 
 		<!-- Three -->
@@ -277,13 +392,13 @@
 			</div>
 		</section>
 
-	</div> 
+	</div>
 
 
 
 
 
-	
+
 
 
 
@@ -294,10 +409,14 @@
 		<div class="inner">
 			<ul class="icons">
 				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-				<li><a href="https://www.linkedin.com/in/abhinav33303/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-				<li><a href="https://github.com/Abhinav330" class="icon brands fa-github"><span class="label">Github</span></a></li>
-				<li><a href="https://www.kaggle.com/abhinavatall" class="icon brands fa-kaggle"><span class="label">Dribbble</span></a></li>
-				<li><a href="mailto:abhinav33303+datascience@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				<li><a href="https://www.linkedin.com/in/abhinav33303/" class="icon brands fa-linkedin"><span
+							class="label">Linkedin</span></a></li>
+				<li><a href="https://github.com/Abhinav330" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li><a href="https://www.kaggle.com/abhinavatall" class="icon brands fa-kaggle"><span
+							class="label">Dribbble</span></a></li>
+				<li><a href="mailto:abhinav33303+datascience@gmail.com" class="icon solid fa-envelope"><span
+							class="label">Email</span></a></li>
 			</ul>
 			<ul class="copyright">
 				<li>&copy; 2023</li>

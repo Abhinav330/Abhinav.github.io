@@ -9,9 +9,7 @@
 	<meta property="og:title" content="Abhinav's Portfolio">
 	<meta property="og:description" content="Explore Abhinav's portfolio showcasing creative projects.">
 	<meta property="og:url" content="https://abhinav330.github.io/Abhinav.github.io">
-	<meta property="og:image" content="https://github.com/Abhinav330/Abhinav.github.io/raw/main/images/og.raw">
-	<meta property="og:type" content="website">
-
+	<meta property="og:image" content="https://github.com/Abhinav330/Abhinav.github.io/blob/main/images/OG.png">
 	<!-- Add more Open Graph tags as needed -->
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -210,7 +208,7 @@
 					button.textContent = i;
 
 					// Add the appropriate classes to match the CSS styles
-					button.classList.add("pagination", "pages", "button");
+					button.classList.add("pagination", "pages", "button", 'small');
 
 					button.addEventListener("click", () => {
 						displayArticles(i);
@@ -229,6 +227,129 @@
 		});
 	</script>
 
+	<script>
+		// List of additional certificates
+		const additionalCertificates = [
+			{ Name: "Python Mega Course", Link: "https://www.udemy.com/certificate/UC-0ab3fd66-394d-4674-afe7-25c3c7e7b5bd/" },
+			{ Name: "Introduction to the Internet of Things and Embedded Systems", Link: "https://www.coursera.org/account/accomplishments/verify/CCR4LLK39C7H" },
+			{ Name: "Industrial IoT on Google Cloud", Link: "https://www.coursera.org/account/accomplishments/verify/SZR8QT4H44N5?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course" },
+			{ Name: "Designing for 3D Printing with Fusion 360", Link: "https://www.udemy.com/certificate/UC-6ab25351-89c2-49ac-9fdd-6b651e053856/" },
+			{ Name: "SQL for Beginners", Link: "https://www.udemy.com/certificate/UC-dea465cd-f5c8-4d6c-9b7e-3bbb3daa7b92/" },
+			{ Name: "Relational Database Design", Link: "https://www.udemy.com/certificate/UC-4a7ca0c1-e7ab-4803-afca-a32f26ccfd33/" },
+			{ Name: "Email Etiquette: Write More Effective Emails At Work", Link: "https://www.udemy.com/certificate/UC-e29e73c8-165a-4891-aa71-822d7e62a2d2/" },
+			{ Name: "Data Warehouse ETL Testing & Data Quality Management A-Z", Link: "https://www.udemy.com/certificate/UC-03e62348-0fd0-43dc-9836-455051ecc78e/" },
+			{ Name: "Communication & Social Skills", Link: "https://www.udemy.com/certificate/UC-6f0175a1-f005-4c3a-94ed-15abcd1eabf0/" },
+			{ Name: "Effective Email Communication: Enhancing Your Voice at Work", Link: "https://www.udemy.com/certificate/UC-5153d274-6d61-4cb3-8e62-0dbe4f6fe9cc/" },
+			{ Name: "SQL Server Integration Services (SSIS) - An Introduction", Link: "https://www.udemy.com/certificate/UC-12e91ae8-4b21-4fa1-ad1a-0af8b9d354e0/" },
+			{ Name: "Data Warehouse Fundamentals for Beginners", Link: "https://www.udemy.com/certificate/UC-6088eb66-0253-4a8b-91e9-662221c3ee12/" },
+			{ Name: "Tactics for Tackling Difficult People in Life and Work", Link: "https://www.udemy.com/certificate/UC-ec3d50ec-85f5-483b-a96f-325b98ca7299/" },
+			{ Name: "Microsoft SQL Server Integration Services (SSIS) Training", Link: "https://www.udemy.com/certificate/UC-73d37d6f-4162-4500-b8d0-eb3054bcc41f/" },
+			{ Name: "Mastering SQL Server 2016 Integration Services (SSIS)-Part 2", Link: "https://www.udemy.com/certificate/UC-b83f2a90-a502-465b-9b94-5a704ba5d23e/" },
+			{ Name: "Mastering SQL Server 2016 Integration Services (SSIS)-Part 1", Link: "https://www.udemy.com/certificate/UC-167195ba-4696-4cd4-953a-67c6f48a3b3d/" },
+			{ Name: "Learn MSBI , SSIS , SSRS and SSAS Step by Step", Link: "https://www.udemy.com/certificate/UC-c80be8f7-46ba-4c6c-a718-11d5559d0f51/" },
+			{ Name: "Feedback is Fuel", Link: "https://www.udemy.com/certificate/UC-75b5f20b-8963-45e5-ac62-20083bac4b33/" },
+			{ Name: "Customer Service", Link: "https://www.udemy.com/certificate/UC-1a073029-ff95-49b0-a62b-440cc6e3c054/" },
+			{ Name: "CONFIDENCE and SELF ESTEEM: Develop Confident Body Language", Link: "https://www.udemy.com/certificate/UC-8a638204-0d0a-4e95-bf7b-763f448664d4/" },
+			{ Name: "Better Virtual Meetings: How to Lead Effective Meetings", Link: "https://www.udemy.com/certificate/UC-a9efe27a-15e9-452e-b1cb-8b0a3de5c53f/" },
+			{ Name: "Active Listening Masterclass", Link: "https://www.udemy.com/certificate/UC-52383286-b718-456e-863c-94c32bae3fdb/" },
+			{ Name: "70-461, 761: Querying Microsoft SQL Server with Transact-SQL", Link: "https://www.udemy.com/certificate/UC-1adbb179-541a-4166-bd0a-b7c673c6f9de/" },
+			{ Name: "Bash Scripting and Shell Programming (Linux Command Line)", Link: "https://www.udemy.com/certificate/UC-bdd4df16-d4fd-4db1-8f99-995110657a09/" },
+			{ Name: "Microsoft SQL Server Reporting Services (SSRS): 2022 edition", Link: "https://www.udemy.com/certificate/UC-6eb9dd64-fdd3-46bf-ba0c-92f65ae4d5fd/" },
+			{ Name: "Microsoft Power BI - The Practical Guide 2023", Link: "https://www.udemy.com/certificate/UC-7d113820-641a-4070-8c10-e8fde0f26eee/" },
+			{ Name: "Mastering SQL Server Reporting Services (SSRS) From Scratch", Link: "https://www.udemy.com/certificate/UC-226cf8ff-3441-4689-bc5c-a91a683192c7/" },
+			{ Name: "Customer Service: Soft Skills Fundamentals", Link: "https://www.udemy.com/certificate/UC-47cfe333-9289-4007-8e81-69323ae9e8ec/" },
+			{ Name: "Communicate for Business: Write, Email, Close the Loop", Link: "https://www.udemy.com/certificate/UC-9d12f472-4f97-4133-95c0-8c155a93c9db/" },
+			{ Name: "AZ-900 Microsoft Azure Fundamentals in a Weekend", Link: "https://www.udemy.com/certificate/UC-d40d4385-62c7-4ce9-9ca2-77ddb792d1f4/" },
+			{ Name: "MLOps Fundamentals: CI/CD/CT Pipelines of ML with Azure Demo", Link: "https://www.udemy.com/certificate/UC-92aeb3ab-a767-4cbe-bf97-b8141340d609/" },
+			{ Name: "Introduction to Business Analytics", Link: "https://www.udemy.com/certificate/UC-71a7874f-0232-41f9-8ddf-3412bfb7b580/" },
+			{ Name: "Transformer Models and BERT Model from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3795377" },
+			{ Name: "Introduction to Large Language Models from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3781019" },
+			{ Name: "Introduction to Generative AI from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3778620" },
+			{ Name: "Attention Mechanism from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3781264" },
+			{ Name: "Introduction to Image Generation from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3852391" },
+			{ Name: "Generative AI Explorer - Vertex AI from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3849363" },
+			{ Name: "Encoder-Decoder Architecture from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3855355" },
+			{ Name: "Create Image Captioning Models from GCP", Link: "https://partner.cloudskillsboost.google/public_profiles/ed452e4e-3f3e-4a3e-b278-cf5db1d98338/badges/3854617" },
+			{ Name: "Intro to SQL", Link: "https://www.kaggle.com/learn/certification/abhinavatall/intro-to-sql" },
+
+		];
+
+		// Variable to track whether additional certificates are displayed
+		let certificatesDisplayed = false;
+
+		// Original content
+		const originalCertificatesHTML = `
+    <article class="col-6 col-12-xsmall">
+        <a href="https://www.credly.com/badges/2c7c1033-09fa-473d-be32-21db0b884bd6/linked_in_profile" class="image fit thumb">
+            <img src="assets/Certificates/AZ 900 Certificate.png" alt="Microsoft Certified: Azure Fundamentals"></a>
+            <h2><a href="https://www.credly.com/badges/2c7c1033-09fa-473d-be32-21db0b884bd6/linked_in_profile">
+                Microsoft Certified: Azure Fundamentals
+            </a></h2>
+    </article>
+
+    <article class="col-6 col-12-xsmall">
+        <a href="https://www.credly.com/badges/4478d07c-e9c1-401c-aeeb-2e0745006d95/linked_in_profile" class="image fit thumb">
+            <img src="assets/Certificates/DP 900.png" alt="Microsoft Certified: Azure Data Fundamentals"></a>
+            <h2><a href="https://www.credly.com/badges/4478d07c-e9c1-401c-aeeb-2e0745006d95/linked_in_profile">
+                Microsoft Certified: Azure Data Fundamentals
+            </a></h2>
+    </article>
+
+    <article class="col-6 col-12-xsmall">
+        <a href="https://www.credly.com/badges/5994cc8e-f1e8-46e2-9190-05f82ceff786/linked_in_profile" class="image fit thumb">
+            <img src="assets/Certificates/AI 900.jpg" alt="Microsoft Certified: Azure AI Fundamentals"></a>
+            <h2><a href="https://www.credly.com/badges/5994cc8e-f1e8-46e2-9190-05f82ceff786/linked_in_profile">
+                Microsoft Certified: Azure AI Fundamentals
+            </a></h2>
+    </article>
+
+    <article class="col-6 col-12-xsmall">
+        <a href="https://learner.henryharvin.com/storage/app/public/images/16838687621683868758.jpg" class="image fit thumb">
+            <img src="assets/Certificates/hh_python_BA.jpg" alt="Certified Python Bussiness Analyst"></a>
+            <h2><a href="https://learner.henryharvin.com/storage/app/public/images/16838687621683868758.jpg">
+                Certified Python Bussiness Analyst
+            </a></h2>
+    </article>
+`;
+
+		// Function to toggle between showing more and showing fewer certificates
+		function toggleCertificates() {
+			const certificatesContainer = document.getElementById("certificatesContainer");
+			const showMoreBtn = document.getElementById("showMoreBtn");
+
+			if (!certificatesDisplayed) {
+				// Show more certificates
+				showMoreBtn.textContent = "Show Less";
+				certificatesContainer.innerHTML = ""; // Clear existing content
+
+				// Display additional certificates
+				additionalCertificates.forEach(certificate => {
+					certificatesContainer.innerHTML += `
+                <article class="col-6 col-12-xsmall">
+                    <h4><li><a href="${certificate.Link}">
+                            ${certificate.Name}
+                        </a></li></h4>
+                </article>
+            `;
+					const solvedCasesSection = document.getElementById("four");
+					solvedCasesSection.scrollIntoView({ behavior: "smooth" });
+				});
+
+				certificatesDisplayed = true;
+			} else {
+				// Show fewer certificates
+				showMoreBtn.textContent = "Show More";
+				certificatesContainer.innerHTML = originalCertificatesHTML;
+
+				certificatesDisplayed = false;
+				const solvedCasesSection = document.getElementById("four");
+				solvedCasesSection.scrollIntoView({ behavior: "smooth" });
+			}
+		}
+
+	</script>
+
+
 </head>
 
 <body class="is-preload">
@@ -241,11 +362,24 @@
 				A Data Science Problem Solver<br />
 				<a href="https://www.linkedin.com/in/abhinav33303/">@Abhinav</a>
 			</h1>
-			<sub><a href="https://www.linkedin.com/in/abhinav33303/">Linkedin</a></sub>
-			<sub><a href="mailto:abhinav33303+datascience@gmail.com">Mail</a></sub>
-			<sub><a href="https://github.com/Abhinav330">Github</a></sub>
-			<sub><a href="https://www.kaggle.com/abhinavatall">Kaggle</a></sub>
-			<sub><a href="assets\pdfs\Abhinav's Resume22-09.pdf">Resume</a></sub>
+			<sub><a href="https://www.linkedin.com/in/abhinav33303/">Linkedin&nbsp;&nbsp;</a></sub>
+			<sub><a href="mailto:abhinav33303+datascience@gmail.com">Mail&nbsp;&nbsp;</a></sub>
+			<sub><a href="https://github.com/Abhinav330">Github&nbsp;&nbsp;</a></sub>
+			<sub><a href="https://www.kaggle.com/abhinavatall">Kaggle&nbsp;&nbsp;</a></sub>
+			<sub><a href="assets\pdfs\Abhinav's Resume22-09.pdf">Resume&nbsp;&nbsp;</a></sub>
+		</div>
+		<div>
+			Index:
+			<li><a><h7 class="section-title" onclick="scrollToSection('one')">Introduction&nbsp;&nbsp; </h7></a> <t>
+			<a><h7 class="section-title" onclick="scrollToSection('two')">Projects&nbsp;&nbsp; </h7></a>
+			<a><h7 class="section-title" onclick="scrollToSection('four')">Certifications&nbsp;&nbsp; </h7></a></li>
+			<a><li><h7 class="section-title" onclick="scrollToSection('five')">Patents&nbsp;&nbsp; </h7></a>
+			<a><h7 class="section-title" onclick="scrollToSection('three')">Online Articles&nbsp;&nbsp; </h7></a>
+			<a><h7 class="section-title" onclick="scrollToSection('seven')">Skills&nbsp;&nbsp; </h7></li></a>
+			<a><li><h7 class="section-title" onclick="scrollToSection('eight')">Resume&nbsp;&nbsp; </h7></a>
+			<a><h7 class="section-title" onclick="scrollToSection('nine')">Get in touch&nbsp;&nbsp; </h7></li></a>
+
+				
 		</div>
 	</header>
 
@@ -280,7 +414,6 @@
 			<div id="article-container" class="row">
 				<!-- Articles will be dynamically loaded here -->
 			</div>
-
 			<div id="pg" class="pagination">
 
 			</div>
@@ -289,12 +422,123 @@
 
 
 
+
+		<!-- <section id="two">
+			<h1>Solved Cases </h1>
+			<div id="article-container" class="row">
+				<article class="col-6 col-12-xsmall">
+				<a href="https://huggingface.co/spaces/roger33303/GenerativeAI-Chatbot.AI-Therapist" class="image fit thumb">
+					<img src="images/thumbs/20.jpg" alt="GenerativeAi Powered Therapist"></a>
+				<h2><a href="https://huggingface.co/spaces/roger33303/GenerativeAI-Chatbot.AI-Therapist">
+					GenerativeAi Powered Therapist
+				</a></h2>
+				<p>An AI Therapist Chatbot powered by OpenAI's GPT-3.5 Turbo model, designed to engage with users in a supportive and empathetic manner, providing responses to user queries and messages.
+
+				</p>
+			</article>	
+		</section> -->
+
+
+
+		<section id="four">
+			<h1>Certifications</h1>
+			<div id="certificatesContainer" class="row">
+				<article class="col-6 col-12-xsmall">
+					<a href="https://www.credly.com/badges/2c7c1033-09fa-473d-be32-21db0b884bd6/linked_in_profile"
+						class="image fit thumb">
+						<img src="assets\Certificates\AZ 900 Certificate.png"
+							alt="Microsoft Certified: Azure Fundamentals"></a>
+					<h2><a href="https://www.credly.com/badges/2c7c1033-09fa-473d-be32-21db0b884bd6/linked_in_profile">
+							Microsoft Certified: Azure Fundamentals
+						</a></h2>
+				</article>
+
+				<article class="col-6 col-12-xsmall">
+					<a href="https://www.credly.com/badges/4478d07c-e9c1-401c-aeeb-2e0745006d95/linked_in_profile"
+						class="image fit thumb">
+						<img src="assets\Certificates\DP 900.png"
+							alt="Microsoft Certified: Azure Data Fundamentals"></a>
+					<h2><a href="https://www.credly.com/badges/4478d07c-e9c1-401c-aeeb-2e0745006d95/linked_in_profile">
+							Microsoft Certified: Azure Data Fundamentals
+						</a></h2>
+				</article>
+
+				<article class="col-6 col-12-xsmall">
+					<a href="https://www.credly.com/badges/5994cc8e-f1e8-46e2-9190-05f82ceff786/linked_in_profile"
+						class="image fit thumb">
+						<img src="assets\Certificates\AI 900.jpg" alt="Microsoft Certified: Azure AI Fundamentals"></a>
+					<h2><a href="https://www.credly.com/badges/5994cc8e-f1e8-46e2-9190-05f82ceff786/linked_in_profile">
+							Microsoft Certified: Azure AI Fundamentals
+						</a></h2>
+				</article>
+
+
+				<article class="col-6 col-12-xsmall">
+					<a href="https://learner.henryharvin.com/storage/app/public/images/16838687621683868758.jpg"
+						class="image fit thumb">
+						<img src="assets\Certificates\hh_python_BA.jpg" alt="Certified Python Bussiness Analyst"></a>
+					<h2><a href="https://learner.henryharvin.com/storage/app/public/images/16838687621683868758.jpg">
+							Certified Python Bussiness Analyst
+						</a></h2>
+				</article>
+			</div>
+			<button id="showMoreBtn" class="button  primary" onclick="toggleCertificates()">Show More</button>
+		</section>
+
+
+		
+
+
+		<section id="five">
+			<h1>Patents & Research Papers</h1>
+			<div class="row">
+				<article class="col-6 col-12-xsmall">
+					<iframe src="assets\pdfs\Dual-Mode Enabled IoT-Based Smart Balcony Gardening in Urban Area.pdf"
+						width="60%" height="80%"></iframe>
+					<a href="https://link.springer.com/chapter/10.1007/978-981-33-4968-1_54">
+						<h5> Dual-Mode Enabled IoT-Based Smart
+							Balcony Gardening in Urban Area<h5>
+					</a>
+
+				</article>
+				<article class="col-6 col-12-xsmall">
+					<iframe src="assets\pdfs\P1.pdf" width="60%" height="80%"></iframe>
+					<h5> Nodal Wireless Communication System for Monitoring
+						Environmental Data Fluctuations in Underground Mines<h5>
+
+							<br><br><br><br><br> <br><br>
+				</article>
+				<article class="col-6 col-12-xsmall">
+					<iframe src="assets\pdfs\p2.pdf" width="60%" height="80%"></iframe>
+					<h5> An Intelligent Helmet to detect toxic, flammable, suffocating gases and
+						heat hazards in under earth mines</h5>
+				</article>
+
+				</article>
+				<article class="col-6 col-12-xsmall">
+					<iframe src="assets\pdfs\p3.pdf" width="60%" height="80%"></iframe>
+					<h5> ISOAP: NO-TOUCH I.O.T SOAP DISPENSER SYSTEM</h5>
+				</article>
+				<br><br><br><br><br> <br><br><br><br><br><br><br><br>
+
+				<article class="col-6 col-12-xsmall">
+					<iframe src="assets\pdfs\p4.pdf" width="60%" height="80%"></iframe>
+					<h5> Carefree Sole, a multi medicated waterproof device, triggered to
+						stimulate foot nerve points for treatment and relief through vibrator motors</h5>
+				</article>
+				<br><br><br><br><br> <br><br><br><br><br><br><br><br>
+
+		</section>
+
+
+
 		<section id="three">
-			<h1>Articles</h1>
+			<h1>Online Articles</h1>
 			<div class="row">
 				<article class="col-6 col-12-xsmall">
 					<a href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D"
-						class="image fit"><img src="images/thumbs/07.jpg" alt="" /></a>
+						class="image fit"><img src="images/thumbs/07.jpg"
+							alt="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D" /></a>
 					<h2><a
 							href="https://www.linkedin.com/pulse/hypothesis-testing-crucial-role-students-t-distribution-abhinav-%3FtrackingId=Njq756gURqiwOQydc45PMw%253D%253D/?trackingId=Njq756gURqiwOQydc45PMw%3D%3D">Hypothesis
 							Testing and the Crucial Role of Student's T-Distribution with real-life example.</a></h2>
@@ -303,10 +547,10 @@
 			</div>
 		</section>
 
-		<section id="six">
+		<section id="seven">
 			<h1> Skills </h1>
 			<h4>
-			<div class="skill-category">Technical Skills:</div>
+				<div class="skill-category">Technical Skills:</div>
 			</h4>
 			<span class="skill-tag">Python</span>
 			<span class="skill-tag">SQL (SQL Server and MySQL)</span>
@@ -358,7 +602,7 @@
 		</section>
 
 
-		<section id="four">
+		<section id="eight">
 			<h2>MY Resume</h2>
 			<div>
 				<iframe src="assets\pdfs\Abhinav's Resume22-09.pdf" width="50%" height="300px"></iframe>
@@ -374,7 +618,7 @@
 
 
 		<!-- Three -->
-		<section id="five">
+		<section id="nine">
 			<h2>Get In Touch</h2>
 			<p>Ready to embark on a data-driven adventure together? Let's connect!
 				I'm eager to share more about my data science expertise and explore how I can contribute to your team's
@@ -404,8 +648,14 @@
 
 
 
+	<script>
+        function scrollToSection(sectionId) {
+            const targetSection = document.getElementById(sectionId);
 
-
+            // Scroll to the target section
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
 
 
 
